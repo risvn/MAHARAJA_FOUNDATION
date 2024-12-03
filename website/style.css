@@ -1,0 +1,253 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and font styling */
+body {
+    font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+    background-color: #cdcccc; /* Background color */
+    color: #333; /* Text color */
+    line-height: 1.6;
+}
+
+/* Navbar styling */
+nav {
+    background-color: #ffffff; /* Off-white light grey background */
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Logo styling */
+.logo h1 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo h1 a {
+    color: inherit; /* Inherit color from h1 */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Navbar links */
+.nav-links {
+    list-style: none;
+    display: flex; /* Ensures nav items are inline */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px; /* Space between items */
+}
+
+.nav-links li:first-child {
+    margin-left: 0; /* Remove left margin for first item */
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    color: #0079ff; /* Blue color on hover */
+    border-bottom: 2px solid #0079ff; /* Underline effect */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px; /* Reduced padding */
+    }
+
+    .logo h1 {
+        font-size: 20px; /* Smaller font for logo */
+    }
+
+    .nav-links {
+        flex-direction: row; /* Ensures links remain in a row on smaller screens */
+        justify-content: center; /* Centers the links */
+    }
+
+    .nav-links li {
+        margin: 0 10px; /* Space between items */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size */
+    }
+}
+/* banner */
+/* Styling the banner image */
+.banner {
+    background-image: url('assets/banner.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Make the image cover the entire area */
+    background-position: center; /* Center the image */
+    height: 500px; /* Adjust the height as needed */
+    width: 120%; /* Ensure the banner spans the entire width of the page */
+    position: relative; /* For positioning the overlay content */
+}
+
+/* Optional: Overlay content like text */
+.banner-overlay {
+    position: absolute;
+    top: 50%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+}
+
+.banner-overlay h1 {
+    font-size: 36px; /* Adjust font size */
+    font-weight: bold;
+}
+
+.banner-overlay p {
+    font-size: 18px; /* Adjust font size */
+    font-weight: lighter;
+}
+
+/* Styling for the bottom text on the banner */
+.banner-bottom-text {
+    position: absolute;
+    bottom: 10px; /* Adjust distance from the bottom */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Center alignment */
+    color: white; /* White text color for contrast */
+    text-align: jus; /* Center text alignment */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 10px 20px; /* Add spacing around the text */
+    border-radius: 8px; /* Rounded corners for the background */
+    font-size: 12px; /* Adjust font size as needed */
+    font-weight: lighter; /* Light font weight for a soft look */
+    line-height: 1.5; /* Line height for better readability */
+    width: 90%; /* Adjust width to prevent overflow */
+    max-width: 90%; /* Limit maximum width */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px; /* Reduced padding */
+    }
+
+    .logo h1 {
+        font-size: 20px; /* Smaller font for logo */
+    }
+
+    .nav-links {
+        flex-direction: row; /* Ensures links remain in a row on smaller screens */
+        justify-content: center; /* Centers the links */
+    }
+
+    .nav-links li {
+        margin: 0 10px; /* Space between items */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+/* Banner styling */
+.banner {
+    background-image: url('assets/banner.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Make the image cover the entire area */
+    background-position: center; /* Center the image */
+    height: 500px; /* Adjust the height as needed */
+    width: 100%; /* Adjust width to match viewport */
+    position: relative; /* For positioning the overlay content */
+}
+
+/* Optional: Overlay content like text */
+.banner-overlay {
+    position: absolute;
+    top: 50%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+}
+
+.banner-overlay h1 {
+    font-size: 36px; /* Adjust font size */
+    font-weight: bold;
+}
+
+.banner-overlay p {
+    font-size: 18px; /* Adjust font size */
+    font-weight: lighter;
+}
+
+/* Main content sections */
+main section {
+    margin: 40px 0; /* Spacing between sections */
+    padding: 20px;
+    background-color: #ffffff; /* White background for better readability */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Section headings */
+main section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #000000; /* Blue for section headings */
+}
+
+/* Paragraph styling */
+main section p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* List styling */
+main section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+main section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Core pillars styling */
+#pillars ul {
+    list-style-type: square;
+}
+
+/* Media queries for main content */
+@media (max-width: 768px) {
+    main section {
+        padding: 15px;
+    }
+
+    main section h2 {
+        font-size: 20px;
+    }
+
+    main section p,
+    main section ul li {
+        font-size: 14px;
+    }
+}
