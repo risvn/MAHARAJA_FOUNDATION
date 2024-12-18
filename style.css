@@ -1,21 +1,20 @@
-/* Reset default styles */
+/* Reset and core styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and font styling */
 body {
-    font-family: 'Arial', sans-serif; /* Clean sans-serif font */
-    background-color: #f1e9d2; /* Background color */
-    color: #333; /* Text color */
+    font-family: 'Arial', sans-serif;
+    background-color: #f1e9d2;
+    color: #333;
     line-height: 1.6;
 }
 
 /* Navbar styling */
 nav {
-    background-color: #f1e9d2; /* Off-white light grey background */
+    background-color: #533420;
     padding: 20px 50px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -26,161 +25,71 @@ nav {
     align-items: center;
 }
 
-
-/* Logo styling */
 .logo h1 {
     font-size: 24px;
-    color: #333;
     font-weight: bold;
-    margin: 0;
+    color: #f1e9d2;
+    
 }
 
-.logo h1 a {
-    color: inherit; /* Inherit color from h1 */
-    text-decoration: none; /* Remove underline */
+.logo a {
+    color: inherit;
+    text-decoration: none;
+    
 }
 
-/* Navbar links */
 .nav-links {
     list-style: none;
-    display: flex; /* Ensures nav items are inline */
+    display: flex;
     align-items: center;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links li {
-    margin-left: 20px; /* Space between items */
-}
-
-.nav-links li:first-child {
-    margin-left: 0; /* Remove left margin for first item */
+    margin-left: 20px;
 }
 
 .nav-links a {
-    color: #333;
+    color: #f1e9d2;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
     padding: 8px 15px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-/* Hover effect for links */
 .nav-links a:hover {
-    color: #0c7d0c; /* Blue color on hover */
-    border-bottom: 2px solid #0c7d0c; /* Underline effect */
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    nav {
-        padding: 15px 20px; /* Reduced padding */
-    }
-
-    .logo h1 {
-        font-size: 20px; /* Smaller font for logo */
-    }
-
-    .nav-links {
-        flex-direction: row; /* Ensures links remain in a row on smaller screens */
-        justify-content: center; /* Centers the links */
-    }
-
-    .nav-links li {
-        margin: 0 10px; /* Space between items */
-    }
-
-    .nav-links a {
-        font-size: 14px; /* Smaller font size */
-    }
-}
-/* banner */
-/* Styling the banner image */
-.banner {
-    background-image: url('assets/banner.jpg'); /* Replace with your image URL */
-    background-size: cover; /* Make the image cover the entire area */
-    background-position: center; /* Center the image */
-    height: 500px; /* Adjust the height as needed */
-    width: 120%; /* Ensure the banner spans the entire width of the page */
-    position: relative; /* For positioning the overlay content */
-}
-
-/* Optional: Overlay content like text */
-.banner-overlay {
-    position: absolute;
-    top: 50%; /* Center the text vertically */
-    left: 50%; /* Center the text horizontally */
-    transform: translate(-50%, -50%); /* Adjust positioning */
-    color: white; /* Text color */
-    text-align: center; /* Center the text */
-}
-
-.banner-overlay h1 {
-    font-size: 36px; /* Adjust font size */
-    font-weight: bold;
-}
-
-.banner-overlay p {
-    font-size: 18px; /* Adjust font size */
-    font-weight: lighter;
-}
-
-
-
-
-/* Styling for the bottom text on the banner */
-.banner-bottom-text {
-    position: absolute;
-    bottom: 6px; /* Adjust distance from the bottom */
-    left: 50%; /* Center the text horizontally */
-    transform: translateX(-50%); /* Center alignment */
-    color: white; /* White text color for contrast */
-    text-align: justify; /* Center text alignment */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-    padding: 10px 20px; /* Add spacing around the text */
-    border-radius: 8px; /* Rounded corners for the background */
-    font-size: 12px; /* Adjust font size as needed */
-    font-weight: lighter; /* Light font weight for a soft look */
-    line-height: 1.5; /* Line height for better readability */
-    width: 90%; /* Adjust width to prevent overflow */
-    max-width: 90%; /* Limit maximum width */
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    nav {
-        padding: 15px 20px; /* Reduced padding */
-    }
-
-    .logo h1 {
-        font-size: 20px; /* Smaller font for logo */
-    }
-
-    .nav-links {
-        flex-direction: row; /* Ensures links remain in a row on smaller screens */
-        justify-content: center; /* Centers the links */
-    }
-
-    .nav-links li {
-        margin: 0 10px; /* Space between items */
-    }
-
-    .nav-links a {
-        font-size: 14px; /* Smaller font size */
-    }
+    color: #0c7d0c;
+    border-bottom: 2px solid #0c7d0c;
 }
 
 /* Banner styling */
-/* Banner */
 .banner {
     background-image: url('assets/smile_girl.jpeg');
     background-size: cover;
     background-position: center;
     height: 500px;
-    width: 100%;
     position: relative;
     animation: slideIn 1s ease-out;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    animation: fadeIn 4s ease;
+}
+
+.banner-overlay h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.banner-overlay p {
+    font-size: 18px;
+    font-weight: lighter;
 }
 
 @keyframes slideIn {
@@ -194,17 +103,6 @@ nav {
     }
 }
 
-/* Overlay content */
-.banner-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    animation: fadeIn 4s ease;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -214,124 +112,73 @@ nav {
     }
 }
 
-.banner-overlay h1 {
-    font-size: 36px;
-    font-weight: bold;
+.banner-bottom-text {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    width: 90%;
 }
 
-.banner-overlay p {
-    font-size: 18px;
-    font-weight: lighter;
-}
 /* Main content sections */
 main section {
-    margin: 15px 0; /* Spacing between sections */
+    margin: 15px 0;
     padding: 20px;
-    background-color: #e8e0d397; /* White background for better readability */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #e8e0d3c6;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Section headings */
 main section h2 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #000000; /* Blue for section headings */
+    color: #000000;
 }
 
-/* Paragraph styling */
-main section p {
-    margin-bottom: 20px;
-    font-size: 16px;
-}
-
-/* List styling */
-main section ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
+main section p,
 main section ul li {
-    margin-bottom: 10px;
     font-size: 16px;
-}
-
-/* Core pillars styling */
-#pillars ul {
-    list-style-type: square;
-}
-
-/* Media queries for main content */
-@media (max-width: 768px) {
-    main section {
-        padding: 15px;
-    }
-
-    main section h2 {
-        font-size: 20px;
-    }
-
-    main section p,
-    main section ul li {
-        font-size: 14px;
-    }
-}
-
-
-/*about__page*/
-/* Reset and core styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ddc5a5;
-    color: #292828;
-    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 /* Team section */
 .team {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    opacity: 0; /* Hidden by default for animation */
-    transform: translateY(50px); /* Start position for animation */
-    animation: fadeInUp 1s ease-out forwards; /* Trigger animation */
 }
 
 .team-member {
-    background-color: #e8e0d397;
+    background-color: #e8e0d3b6;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-photo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover; /* Ensure the image covers the circle */
-    object-position: top center; /* Center the image */
+    object-fit: cover;
+    object-position: top;
     margin-bottom: 20px;
 }
 
-.member-info {
-    text-align: center;
-}
-
-h3 {
+.member-info h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
     font-weight: bold;
@@ -349,40 +196,51 @@ h3 {
     margin-bottom: 20px;
 }
 
-/* Social links styling */
 .social-links a {
     margin: 0 10px;
-    text-decoration: none;
     color: #555;
     font-size: 1.2rem;
-    transition: color 0.3s ease; /* Smooth hover effect */
+    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
     color: #000;
 }
 
-/* Hover effects for team members */
 .team-member:hover {
-    transform: translateY(-10px); /* Lift the card on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive design */
+/* Adjust navbar styling for smaller screens */
 @media (max-width: 768px) {
-    .team {
-        grid-template-columns: 1fr;
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 5px 0; /* Add spacing between links */
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        text-align: center; /* Center align links */
+    }
+
+    .logo h1 {
+        font-size: 22px;
     }
 }
 
-/* Keyframes for animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Prevent links from overflowing */
+.nav-links {
+    flex-wrap: wrap; /* Wrap items on smaller screens */
 }
